@@ -16,7 +16,13 @@ function move (position, roll) {
 }
 
 //Personalized Message https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
+function greet (name, owner) {
+  if (name===owner) {
+    return 'Hello boss'
+  } else return 'Hello guest'
+}
 
 //Keep Hydrated https://www.codewars.com/kata/keep-hydrated-1/train/javascript
+
 
 //Opposites Attract https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
