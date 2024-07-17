@@ -23,6 +23,8 @@ function greet (name, owner) {
 }
 
 //Keep Hydrated https://www.codewars.com/kata/keep-hydrated-1/train/javascript
-
+function litres(time) {
+  return Math.trunc(time*0.5);
+}
 
 //Opposites Attract https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
