@@ -16,7 +16,7 @@ function stringToArray(string) {
   return array
 }
 //-------------------------------------------------------------------------------
-function stringToArray(string){
+function stringToArray(string) {
   return string.split(' ');
 }
 
@@ -35,7 +35,7 @@ https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
 */
 
 function DNAtoRNA(dna) {
- return dna.replace(/T/g, "U");
+  return dna.replace(/T/g, "U");
 }
 
 /*Find Maximum and Minimum Values of a List
@@ -51,14 +51,14 @@ You may consider that there will not be any empty arrays/vectors.
 https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
 */
 
-var min = function(list){
-    list.sort((a, b) => (a - b));
-    return list[0];
+var min = function(list) {
+  list.sort((a, b) => (a - b));
+  return list[0];
 }
 
-var max = function(list){
-    list.sort((a, b) => (b - a));
-    return list[0];
+var max = function(list) {
+  list.sort((a, b) => (b - a));
+  return list[0];
 }
 
 /*Smallest value of an array
@@ -87,11 +87,11 @@ function min(arr, toReturn) {
 }
 //-----------------------------------------------------------------------------------
 function min(arr, toReturn) {
-    let index=0;
-    for(i=1;i<arr.length;i++){
-        if(arr[i] < arr[index]) index=i;
-    }
-    return toReturn == "index" ? index : arr[index];
+  let index = 0;
+  for (i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[index]) index = i;
+  }
+  return toReturn == "index" ? index : arr[index];
 }
 
 /////////////////////////////////////////////////////////Additional tasks://////////////////////
@@ -103,7 +103,7 @@ https://www.codewars.com/kata/53ee5429ba190077850011d4/train/javascript
 */
 
 function doubleInteger(i) {
-  return i*2;
+  return i * 2;
 }
 
 /*Twice as old
@@ -116,15 +116,15 @@ The answer is always greater or equal to 0, no matter if it was in the past or i
 https://www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript
 */
 function twiceAsOld(dadYearsOld, sonYearsOld) {
-  let distance=0;
-  if ((dadYearsOld+distance) > (sonYearsOld+distance) * 2) {
-    while ((dadYearsOld+distance) !== (sonYearsOld+distance) * 2) {
-        distance++;
+  let distance = 0;
+  if ((dadYearsOld + distance) > (sonYearsOld + distance) * 2) {
+    while ((dadYearsOld + distance) !== (sonYearsOld + distance) * 2) {
+      distance++;
     }
   }
-  else if ((dadYearsOld+distance) < (sonYearsOld+distance) * 2) {
-    while ((dadYearsOld+distance) !== (sonYearsOld+distance) * 2) {
-        distance--;
+  else if ((dadYearsOld + distance) < (sonYearsOld + distance) * 2) {
+    while ((dadYearsOld + distance) !== (sonYearsOld + distance) * 2) {
+      distance--;
     }
   }
   return Math.abs(distance)
@@ -146,15 +146,61 @@ The input will not be 0.
 https://www.codewars.com/kata/5933a1f8552bc2750a0000ed/train/javascript
 */
 
-function nthEven(n){
-  return n*2-2
+function nthEven(n) {
+  return n * 2 - 2
 }
 
-/*What's the real floor
+/*What's the real floor?
+Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
+Write a function that given a floor in the american system returns the floor in the european system.
+With the 1st floor being replaced by the ground floor and the 13th floor being removed, the numbers move down to take their place. In case of above 13, they move down by two because there are two omitted numbers below them.
+Basements (negatives) stay the same as the universal level.
+Examples
+1  =>  0 
+0  =>  0
+5  =>  4
+15  =>  13
+-3  =>  -3
 https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
 */
+
+function getRealFloor(n) {
+  //  if (0 <= n < 13) { return n + 1 }
+  //  else return n
+  if (n < 0) { return n }
+  else if (n < 13) { return n + 1 }
+  else return n
+}
+
 /*Clock
+Clock shows h hours, m minutes and s seconds after midnight.
+Your task is to write a function which returns the time since midnight in milliseconds.
+Example:
+h = 0
+m = 1
+s = 1
+result = 61000
+Input constraints:
+0 <= h <= 23
+0 <= m <= 59
+0 <= s <= 59
 https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
 */
-/*Is n divisible by x and y    https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+
+function past(h, m, s) {
+  return h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000
+}
+
+/*Is n divisible by x and y?
+Create a function that checks if a number n is divisible by two numbers x AND y.
+All inputs are positive, non-zero numbers.
+Examples:
+1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
 */
+function isDivisible(n, x, y) {
+  return (n % x === 0 && n % y === 0) ? true : false
+}
