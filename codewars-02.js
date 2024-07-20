@@ -15,7 +15,10 @@ function stringToArray(string) {
   array.push(string);
   return array
 }
-
+//-------------------------------------------------------------------------------
+function stringToArray(string){
+  return string.split(' ');
+}
 
 
 https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
