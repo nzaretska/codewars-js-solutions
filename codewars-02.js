@@ -51,9 +51,50 @@ You may consider that there will not be any empty arrays/vectors.
 https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
 */
 
+var min = function(list){
+    list.sort((a, b) => (a - b));
+    return list[0];
+}
 
+var max = function(list){
+    list.sort((a, b) => (b - a));
+    return list[0];
+}
+
+/*Smallest value of an array
+Write a function that can return the smallest value of an array or the index of that value.
+The function's 2nd parameter will tell whether it should return the value or the index.
+Assume the first parameter will always be an array filled with at least 1 number and no duplicates.
+Assume the second parameter will be a string holding one of two values: 'value' and 'index'.
+min([1,2,3,4,5], 'value') // => 1
+min([1,2,3,4,5], 'index') // => 0
 https://www.codewars.com/kata/544a54fd18b8e06d240005c0/train/javascript
-Додаткові задачки по JS, щоб формувати навички, якщо маєте час і бажання 🙂
+*/
+
+function min(arr, toReturn) {
+  let minVal = arr[0];
+  let minIndex = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < minVal) {
+      minVal = arr[i];
+      minIndex = i;
+    }
+  }
+  if (toReturn === "value") {
+    return minVal;
+  } else
+    return minIndex;
+}
+//-----------------------------------------------------------------------------------
+function min(arr, toReturn) {
+    let index=0;
+    for(i=1;i<arr.length;i++){
+        if(arr[i] < arr[index]) index=i;
+    }
+    return toReturn == "index" ? index : arr[index];
+}
+
+Additional tasks:
 Double Integer    https://www.codewars.com/kata/53ee5429ba190077850011d4/train/javascript
 
 
