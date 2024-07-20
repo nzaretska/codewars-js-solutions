@@ -94,9 +94,11 @@ function min(arr, toReturn) {
     return toReturn == "index" ? index : arr[index];
 }
 
-Additional tasks:
-Double Integer    https://www.codewars.com/kata/53ee5429ba190077850011d4/train/javascript
+/////////////////////////////////////////////////////////Additional tasks://////////////////////
 
+/*Double Integer
+https://www.codewars.com/kata/53ee5429ba190077850011d4/train/javascript
+*/
 
 /*Twice as old
 Your function takes two arguments:
@@ -126,7 +128,14 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - 2 * sonYearsOld);
 }
 
-Return n-th even number    https://www.codewars.com/kata/5933a1f8552bc2750a0000ed/train/javascript
-What's the real floor     https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
-Clock    https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
-Is n divisible by x and y    https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+/*Return n-th even number
+https://www.codewars.com/kata/5933a1f8552bc2750a0000ed/train/javascript
+*/
+/*What's the real floor
+https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
+*/
+/*Clock
+https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a/train/javascript
+*/
+/*Is n divisible by x and y    https://www.codewars.com/kata/5545f109004975ea66000086/train/javascript
+*/
