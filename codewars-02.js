@@ -15,7 +15,7 @@ function stringToArray(string) {
   array.push(string);
   return array
 }
-//-------------------------------------------------------------------------------
+//-----------------------------------------
 function stringToArray(string) {
   return string.split(' ');
 }
@@ -85,7 +85,7 @@ function min(arr, toReturn) {
   } else
     return minIndex;
 }
-//-----------------------------------------------------------------------------------
+//---------------------------------------------
 function min(arr, toReturn) {
   let index = 0;
   for (i = 1; i < arr.length; i++) {
@@ -129,7 +129,7 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   }
   return Math.abs(distance)
 }
-//----------------------------------------------------------------------------
+//------------------------------------------------
 function twiceAsOld(dadYearsOld, sonYearsOld) {
   return Math.abs(dadYearsOld - 2 * sonYearsOld);
 }
@@ -163,13 +163,14 @@ Examples
 -3  =>  -3
 https://www.codewars.com/kata/574b3b1599d8f897470018f6/train/javascript
 */
-
 function getRealFloor(n) {
-  //  if (0 <= n < 13) { return n + 1 }
-  //  else return n
-  if (n < 0) { return n }
-  else if (n < 13) { return n + 1 }
-  else return n
+  if (n <= 0) { return n }
+  else if (n < 13) { return n - 1 }
+  else return n - 2
+}
+//-------------------------------------------------
+function getRealFloor(n) {
+  return n => n <= 0 ? n : n < 13 ? n - 1 : n - 2;
 }
 
 /*Clock
